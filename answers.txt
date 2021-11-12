@@ -1,0 +1,59 @@
+Which text pairs are definitely plagiarized pairs?
+
+Files b and g have a set containment of 1 with all values of n. 
+
+You can read the paragraphs in the original files to verify this. What type of plagiarism took place in these cases?
+
+Looking at the original files they are identical. This is verbatim plagiarism.
+
+Which text pairs are similar enough that warrants a deeper investigation by a human? 
+
+Files b and f, f and b, f and g, h and y, all have a fairly large n_1 comparison (>.5), which could be fine, however, they still have a large comparison at the following n values.
+
+Explain your reasoning. How do the containment values for these text pairs compare to the text pairs in the previous question?
+
+Files b and f, f and b, f and g, h and y, all have a fairly large n_1 comparison (>.5), which could be fine, however, they still have a large comparison at the following n values.
+C_10(F,P) = 0.103 and C_10(P,F)=0.098
+C_9(B,F)=0.015 and C_9(F,B)-0.017
+
+I would compare these pairs of files, so see if they seem plagiarized or not.
+
+With how short the writing sample is, and how general you would be speaking about the topic I would say any smaller similarities would be coincidence in similar wording.
+
+What happens to Cn(A,B) as n increases, for the same pair of texts? Why does this occur?
+
+As n increases, Cn(A,B) decreases or remains the same. This happens because while they may have used the same words they could have ordered them differently. For example “A cat ate the bird” would be the same as “A bird ate the cat” at a unigram level, however at a bigram level they only have one pair. Similar things are happening in the text samples. Many contain phrases such as “computer science” and common words like “the” and “and”. Once you start pairing and ordering these words the similarities decrease.
+
+In this assignment, we did not do any stemming or lemmatization of the text. What would you expect the containment values to be like if we added stemming as a preprocessing step to the text? Do you expect them to increase, stay the same, or decrease? Explain your answer.
+
+I think if we added stemming or lemmatization, we would expect the containment values to increase. It would make similar words into the same word. Such as “computer” and “computers” will become one word. It will add to the containment in unigrams and phrases would also find more matches, since we have eliminated different types of words.
+
+For paragraphs this short, what is a good value of n to use to detect plagiarism automatically?
+ 
+I think based on how short the word is you would want an n closer to average sentence length (15 words). Since a lot of students will use similar phrases already. I would pick a n of 8. 
+
+Does this hold for the borderline cases where plagiarism is not definite but only a possibility? 
+
+Justify your choice based on the data in the table.
+The pairs the have values at n=8 are:
+B and F, F and P, F and Z, F and G, H and Y, and P and Z. 
+
+The ones that end at n=7 are
+Z and K, Z and B, P and G, P and B, and G and Z, all of which start with low containment values.
+
+K is similar to Z in the first phrase, and some examples, however, reading both, we can tell they aren’t plagiarized.
+The other files all show up in some of the other pairs.
+
+For the n you've chosen in the previous question, what is a good value of Cn(A,B) to use (for your data sample)? 
+
+For about 100 words we can get about 6 sentences. Those sentences would have about 17 words. So we would have about 10 8-grams for each sentence. And about 100 8-grams per file. Therefore I would say anything higher than 0.01 would be suspicious, as that would mean more than 1, 8-gram matches. In a paragraph that small I would want to exam this closer.
+
+Justify your choice based on the data in the table. Again, consider both the situation of when the texts are definitely involved plagiarism verses when the texts are likely to involve plagiarism.
+
+Some pairs that would be looked into are B and F, B and G, F and P, F and Z, F and G, H and Y, and P and Z.
+
+B, F, G, P, and Z all start with a very similar sentence, which could have been plagiarized. (B and G are identical files).
+
+H and Y have a few different phrases that are similar which makes them more likely to be plagiarized. 
+
+
